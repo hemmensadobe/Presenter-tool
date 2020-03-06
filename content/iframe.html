@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Adobe Creative Cloud</title>
+    <style type="text/css">
+    	* {margin: 0; padding: 0}
+    	header {
+    		width: 100%;
+    		position: absolute;
+    		background: #000;
+    		opacity: 0.4;
+    		color: #fff;
+    	    z-index: 2147483647;
+    	}
+    	#v {z-index: 1;
+    		position: relative;
+    		}
+    </style>
+
+  </head>
+  <body>
+  <header><h1 id="h">Adobe Creative Cloud | Scott Hemmens</h1></header>
+  <video width="1920" height="1080" controls autoplay loop muted playsinline>
+  <source src="video/cc-ambient.mp4" type="video/mp4">
+</video id="v">
+    <script type="text/javascript">
+
+function toggleFullscreen() {
+  let elem = document.querySelector("header");
+
+  if (!document.fullscreenElement) {
+    elem.requestFullscreen().catch(err => {
+      alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+    });
+  } else {
+    document.exitFullscreen();
+  }
+}
+
+    </script>
+  </body>
+</html>

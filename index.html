@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Adobe Creative Cloud</title>
+    <link rel="stylesheet" href="https://use.typekit.net/wim7kwm.css">
+    <style type="text/css">
+    	* {margin: 0; padding: 0;}
+    	body {
+    		color: #fff;
+    		background: #000;
+    	}
+    	header {
+    		
+    	}
+    	#v {z-index: 1;
+    		}
+    	#player {
+    		position: absolute;
+    		z-index: 1;
+    	}
+    	#logo {
+    		position: absolute;
+    		top: 0px;
+			left: 48px;
+			width: 68px;
+			height: 107px;
+			z-index: 1000;
+		}
+		#title-card {
+			position: absolute;
+			top: 436px;
+			left: 288px;
+			width: 1200px;
+			height: 117px;
+			z-index: 2;
+		}
+
+		em {
+			font-style: normal;
+			font-weight: 300;
+		}
+		#title-card h1 {
+		   font: Bold 100px/117px Niveau Grotesk;
+		}
+	
+		#title-card summary {
+			font-family: niveau-grotesk, sans-serif;
+			font-weight: 200;
+			font-style: normal;
+			font-size: 30px;
+			margin: 15px 0;
+			padding:9px 18px;
+
+		}
+		#title-card summary em{
+			font-weight: 600;
+
+		}
+		.contrast {
+			background: #FC0000;
+			color: white;
+		}
+		#header-bar-limbic, #header-bar-xd , #header-bar-limbic, #header-bar-case, #header-bar-spark {
+			position: absolute;
+			/*top: 37px;
+			left: 154px;*/
+			top:0;
+			left: 0;
+			text-align: left;
+			color: #FFFFFF;
+			z-index: 100;
+			width: 100%;
+			height: 300px;
+		}
+		#header-bar-limbic h1, #header-bar-limbic h2, #header-bar-xd h1, #header-bar-xd h2, #header-bar-case h1, #header-bar-case h2, #header-bar-spark h1, #header-bar-spark h2 {
+			font: Bold 60px/70px Niveau Grotesk;
+			letter-spacing: 0;
+		}
+		#header-bar-limbic h2, #header-bar-case h2{color: #FC0000;}
+		#header-group {
+			position: absolute;
+			top: 37px;
+			left: 154px;
+
+		}
+		nav {position: absolute;
+			top: 20px;
+			right: 20px;
+			z-index: 4000;
+
+		}
+
+		nav ul li{
+			display: inline;
+			list-style: none;
+			font-family: niveau-grotesk, sans-serif;
+			font-weight: 200;
+			font-style: normal;
+			font-size: 20px;
+			padding:0 4px;
+		}
+		nav ul li.selected {
+			background:#FC0000;
+			color:#000;
+		}
+		nav ul li:hover {
+			background:#fff;
+			color:#000;
+		}
+
+		#header-bar-container {
+			background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0));
+			position: fixed;
+			top:0;
+			left:0;
+			z-index: 10;
+			width: 100%;
+			height: 220px;
+		}
+    </style>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+  </head>
+  <body>
+  	<div id="logo"><img src="img/red-tag.png" /></div>
+  	<header id="title-card">
+  		<h1>Mixed Media <em>Presentations</em></h1>
+  		<summary class="contrast">Scott Hemmens | <em>Solutions Consultant</em></summary>
+  	</header>
+  	<div id="header-bar-container">
+	  	<div id="header-bar-limbic">
+	  		<div id="header-group">
+	  			<h1>Mixed Media <em>Presentations</em></h1>
+	  			<h2><em>Limbic Opening </em>Video</h2>
+	  		</div>
+	  	</div>
+	  	<div id="header-bar-xd">
+	  		<div id="header-group">
+	  			<h1>Mixed Media <em>Presentations</em></h1>
+	  			<h2>XD Slides</h2>
+	  		</div>
+	  	</div>
+	  	  	<div id="header-bar-case">
+	  		<div id="header-group">
+	  			<h1>Mixed Media <em>Presentations</em></h1>
+	  			<h2>Video <em>Served from youtube</em></h2>
+	  		</div>
+	  	</div>
+	  	<div id="header-bar-spark">
+	  		<div id="header-group">
+	  			<h1>Mixed Media <em>Presentations</em></h1>
+	  			<h2><em>Adobe Spark</em></h2>
+	  		</div>
+	  	</div>
+	 </div>
+	  	<iframe id="player" style="width:100%; height:100%;position:absolute;top:0px;left:0px;right:0px;bottom:0px" src="content/opening-video.html" frameborder="0" height="100%" width="100%"></iframe>
+	  	<nav>
+	  		<ul>
+	  			<li id="li-intro" class="selected">Intro</li>
+	  			<li id="li-limbic">Limbic Opening</li>
+	  			<li id="li-xd-slides">XD slides</li>
+	  			<li id="li-spark">Spark</li>
+	  			<li id="li-case">Youtube</li>
+	  		</ul>
+	  	</nav>
+
+  
+<!--width: 100%;
+    		background: #000;
+    		opacity: 0.4;
+    		color: #fff;
+    	    z-index: 2147483647;
+    	    position: fixed;-->
+  <!--
+  <header><h1 id="h">Adobe Creative Cloud | Scott Hemmens</h1></header>
+  <div id="izame"><iframe width="1920" height="1176" src="https://xd.adobe.com/embed/5fef3890-bca4-43fa-5cf6-5433a0c25726-29de/?fullscreen" frameborder="0" allowfullscreen></iframe></div>
+  <video width="1920" height="1080" controls autoplay loop muted playsinline>
+  <source src="video/cc-ambient.mp4" type="video/mp4">
+</video id="v">
+   -->
+  </body>
+  <script type="text/javascript">
+  	var logo = $('#logo');
+  	var titleCard = $('#title-card');
+  	var headerBarLimbic = $('#header-bar-limbic');
+  	var headerBarXd = $('#header-bar-xd');
+  	var headerBarCase = $('#header-bar-case');
+  	var headerBarSpark = $('#header-bar-spark');
+
+  	function hideEverything() {
+	  	headerBarLimbic.hide();
+	  	headerBarXd.hide();
+	  	headerBarCase.hide();
+	  	headerBarSpark.hide();
+  	}
+
+  	hideEverything();
+
+  	function removeSelected() {
+  		$('#li-intro').removeClass('selected');
+  		$('#li-limbic').removeClass('selected');
+  		$('#li-xd-slides').removeClass('selected');
+  		$('#li-case').removeClass('selected');
+  		$('#li-spark').removeClass('selected');
+  	}
+
+  	//headerBar.hide();
+  	
+  	$('#li-limbic').on('click', function(){
+  		hideEverything();
+  		removeSelected();
+  		titleCard.fadeOut('slow');
+		headerBarLimbic.show();
+		$('#player').attr('src', 'content/limbic-video.html');
+		$('#li-limbic').addClass('selected');
+  	});
+
+
+  	$('#li-spark').on('click', function(){
+  		hideEverything();
+  		removeSelected();
+  		titleCard.fadeOut('slow');
+		headerBarSpark.show();
+		$('#player').attr('src', 'https://spark.adobe.com/page/5VpWQHBdx1unT/');
+		$('#li-spark').addClass('selected');
+  	});
+
+  	 $('#li-intro').on('click', function(){
+  	 	hideEverything();
+  		removeSelected();
+  		titleCard.fadeIn('slow');
+		$('#player').attr('src', 'content/opening-video.html');
+		$('#li-intro').addClass('selected');
+  	});
+  	   	 $('#li-xd-slides').on('click', function(){
+  	   	hideEverything();
+  		removeSelected();
+  		titleCard.fadeOut('slow');
+		headerBarXd.show();
+		$('#player').attr('src', 'content/xd.html');
+		$('#li-xd-slides').addClass('selected');
+  	});
+
+
+  	   	$('#li-case').on('click', function(){
+  	   	hideEverything();
+  		removeSelected();
+  		titleCard.fadeOut('slow');
+		headerBarCase.show();
+		$('#player').attr('src', 'https://www.youtube.com/embed/gtEvrqyguak?controls=0&autoplay');
+		$('#li-case').addClass('selected');
+		});
+
+		logo.on('click', function(){
+		$('#header-bar-container').toggle();
+	});
+
+  </script>
+
+
+
+</html>
