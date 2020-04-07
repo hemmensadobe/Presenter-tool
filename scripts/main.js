@@ -15,58 +15,55 @@
   	hideEverything();
 
   	function removeSelected() {
-  		$('#li-intro').removeClass('selected');
-  		$('#li-limbic').removeClass('selected');
-  		$('#li-xd-slides').removeClass('selected');
-  		$('#li-case').removeClass('selected');
-  		$('#li-spark').removeClass('selected');
+  		$('#li-content-a').removeClass('selected');
+  		$('#li-content-b').removeClass('selected');
+  		$('#li-content-c').removeClass('selected');
+  		$('#li-content-d').removeClass('selected');
+  		$('#li-content-e').removeClass('selected');
   	}
 
-  	//headerBar.hide();
+    $('#li-content-a').on('click', function(){
+      hideEverything();
+      removeSelected();
+      titleCard.fadeIn('slow');
+    $('#player').attr('src', 'content/content-a.html');
+    $('#li-content-a').addClass('selected');
+    });
   	
-  	$('#li-limbic').on('click', function(){
+  	$('#li-content-b').on('click', function(){
   		hideEverything();
   		removeSelected();
   		titleCard.fadeOut('slow');
-		headerBarLimbic.show();
-		$('#player').attr('src', 'content/limbic-video.html');
-		$('#li-limbic').addClass('selected');
+		  headerBarLimbic.show();
+		$('#player').attr('src', 'content/content-b.html');
+		$('#li-content-b').addClass('selected');
   	});
 
+    $('#li-content-c').on('click', function(){
+       hideEverything();
+       removeSelected();
+       titleCard.fadeOut('slow');
+       headerBarXd.show();
+    $('#player').attr('src', 'content/content-c.html');
+    $('#li-content-c').addClass('selected');
+    });
 
-  	$('#li-spark').on('click', function(){
+  	$('#li-content-d').on('click', function(){
   		hideEverything();
   		removeSelected();
   		titleCard.fadeOut('slow');
-		headerBarSpark.show();
+		  headerBarSpark.show();
 		$('#player').attr('src', 'https://spark.adobe.com/page/5VpWQHBdx1unT/');
-		$('#li-spark').addClass('selected');
+		$('#li-content-d').addClass('selected');
   	});
 
-  	 $('#li-intro').on('click', function(){
-  	 	hideEverything();
-  		removeSelected();
-  		titleCard.fadeIn('slow');
-		$('#player').attr('src', 'content/opening-video.html');
-		$('#li-intro').addClass('selected');
-  	});
-  	   	 $('#li-xd-slides').on('click', function(){
+    $('#li-content-e').on('click', function(){
   	   	hideEverything();
-  		removeSelected();
-  		titleCard.fadeOut('slow');
-		headerBarXd.show();
-		$('#player').attr('src', 'content/xd.html');
-		$('#li-xd-slides').addClass('selected');
-  	});
-
-
-  	   	$('#li-case').on('click', function(){
-  	   	hideEverything();
-  		removeSelected();
-  		titleCard.fadeOut('slow');
-		headerBarCase.show();
+        removeSelected();
+  		  titleCard.fadeOut('slow');
+		    headerBarCase.show();
 		$('#player').attr('src', 'https://www.youtube.com/embed/gtEvrqyguak?controls=0&autoplay');
-		$('#li-case').addClass('selected');
+		 $('#li-content-e').addClass('selected');
 		});
 
 		logo.on('click', function(){
