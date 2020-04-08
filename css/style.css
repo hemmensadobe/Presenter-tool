@@ -1,10 +1,17 @@
-* {margin: 0; padding: 0;}
+		/* GLOBAL STYLES */
+		:root {
+
+			--main-bg-color: black;
+ 	    	--main-text-color: white;
+ 	    	--contrast-color: #FC0000;
+ 	    	--selected-color: black;
+		
+		}
+
+		* {margin: 0; padding: 0;}
     	body {
-    		color: #fff;
-    		background: #000;
-    	}
-    	header {
-    		
+    		color: var(--main-text-color);
+    		background: var(--main-bg-color);
     	}
     	#v {z-index: 1;
     		}
@@ -33,6 +40,7 @@
 			font-style: normal;
 			font-weight: 300;
 		}
+		
 		#title-card h1 {
 		   font: Bold 100px/117px Niveau Grotesk;
 		}
@@ -51,7 +59,7 @@
 
 		}
 		.contrast {
-			background: #FC0000;
+			background: var(--contrast-color);
 			color: white;
 		}
 		#header-bar-limbic, #header-bar-xd , #header-bar-limbic, #header-bar-case, #header-bar-spark {
@@ -61,7 +69,6 @@
 			top:0;
 			left: 0;
 			text-align: left;
-			color: #FFFFFF;
 			z-index: 100;
 			width: 100%;
 			height: 300px;
@@ -94,8 +101,8 @@
 			padding:0 4px;
 		}
 		nav ul li.selected {
-			background:#FC0000;
-			color:#000;
+			background: var(--contrast-color);
+			color: var(--selected-color);
 		}
 		nav ul li:hover {
 			background:#fff;
