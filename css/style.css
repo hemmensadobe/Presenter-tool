@@ -3,7 +3,7 @@
 
 			--main-bg-color: black;
  	    	--main-text-color: white;
- 	    	--contrast-color: #FC0000;
+ 	    	--contrast-color: #00B107; /*red*/
  	    	--selected-color: black;
 		
 		}
@@ -40,7 +40,7 @@
 			font-style: normal;
 			font-weight: 300;
 		}
-		
+
 		#title-card h1 {
 		   font: Bold 100px/117px Niveau Grotesk;
 		}
